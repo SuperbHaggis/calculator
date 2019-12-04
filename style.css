@@ -8,7 +8,7 @@ body {
   flex-direction: column;
 }
 
-#shell {
+#chassis {
   display: flex;
   min-width: 300px;
   max-width: 300px;
@@ -24,20 +24,22 @@ body {
   display: flex;
   justify-content: end;
   align-items: center;
+  background: grey;
   color: white;
   min-height: 50px;
-  background: grey;
-  margin: auto;
   min-width: 255px;
+  margin: auto;
   padding-right: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: xx-large;
 }
 
 #buttonContainer {
   display: flex;
   max-width: 300px;
   margin: auto;
-  padding-left: 15px;
   margin-top: 0px;
+  padding-left: 15px;
 }
 
 #digits {
@@ -48,7 +50,6 @@ body {
 #operators {
   display: flex;
   flex-wrap: wrap;
-  
 }
 
 .button {
