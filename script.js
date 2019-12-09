@@ -38,9 +38,10 @@ operate = (a, b, operator) => {
       result = divide(a, b);
       break;
   }
+  result = +result.toFixed(10);
   console.log(result);
   (result == 'Infinity') ? (display.textContent = 'Error') : 
-    (display.textContent = result.toFixed(2));
+    (display.textContent = result.toString().slice(0, 12));
 };
 
 //Update display
@@ -48,9 +49,11 @@ updateDisplay = (userInput) => display.textContent = userInput;
 
 document.querySelectorAll('.digit').forEach((digit) => {
   digit.addEventListener('click', e => {
-    updateDisplay(display.textContent + digit.textContent);
-    var displayValue = display.textContent;
-    console.log(displayValue);
+    if (display.textContent.length < 12) {
+      updateDisplay(display.textContent + digit.textContent);
+      var displayValue = display.textContent;
+      console.log(displayValue);
+    }
   });
 });
 
